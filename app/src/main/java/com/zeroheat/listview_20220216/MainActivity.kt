@@ -33,18 +33,18 @@ class MainActivity : AppCompatActivity() {
         mAdapter = StudentAdapter(this, R.layout.student_list_item, mStudentList)
         studentListView.adapter = mAdapter
 
-        studentListView.setOnItemClickListener{adapterView, view, position, l ->
+        studentListView.setOnItemClickListener { adapterView, view, position, l ->
 
 
-        val clickedStudent = mStudentList[position]
+            val clickedStudent = mStudentList[position]
 
             Toast.makeText(this, "${clickedStudent.name}학생 클릭됨", Toast.LENGTH_SHORT).show()
-
+        }
         studentListView.setOnItemLongClickListener { parent, view, position, id ->
 
             val longClickedStudent = mStudentList[position]
             
-            AlertDialog.Builder(this)
+           val alert = AlertDialog.Builder(this)
                 .setTitle("학생 삭제")
                 .setMessage("정말 ${longClickedStudent.name} 학생을 삭제하시겠습니까?")
                 .setPositiveButton("확인", DialogInterface.OnClickListener { dialog, which ->
@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity() {
 
             return@setOnItemLongClickListener true
 
-        }
+
 
 
         }
