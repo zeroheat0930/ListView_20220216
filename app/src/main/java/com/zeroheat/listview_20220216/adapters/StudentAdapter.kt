@@ -34,7 +34,7 @@ class StudentAdapter(
         txtAddress.text = data.address
 
         val age = 2022 -data.birthYear + 1
-        txtAddress.text = "(${age}세)"
+        txtAge.text = "(${age}세)"
 
 
 
