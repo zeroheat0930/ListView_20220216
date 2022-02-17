@@ -49,8 +49,7 @@ class StudentAdapter(
         txtStudentName.text = data.name
         txtAddress.text = data.address
 
-        val age = 2022 -data.birthYear + 1
-        txtAge.text = "(${age}세)"
+        txtAge.text = "(${data.getKoreaAge(2022)}세)"
 
 
         //get view 함수의 값을 로우로 반환함

@@ -23,6 +23,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
+
+
         //arraylist = mstudentlist -> .add(studentData.kt의 .string .int .string 값을 arraylist에 넣어줌)
         mStudentList.add(StudentData("조경진", 1988, "서울시 동대문구"))
         mStudentList.add(StudentData("고재천", 1988, "서울시 중랑구"))
